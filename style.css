@@ -16,7 +16,6 @@
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
 }
 
 body{
@@ -25,6 +24,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #0d0000;
+
 }
 
 form{
@@ -164,4 +165,18 @@ form:hover .b3{
 header {
     width: 100%;
     height: 100%;
+}
+
+.fade-in-form {
+    opacity: 0;
+    transform: translateY(-20px); /* Начальное смещение формы вверх */
+    transition: opacity 1s ease, transform 1s ease; /* Плавный переход прозрачности и смещения */
+    transition-delay: 0.2s; /* Задержка перед запуском анимации */
+
+}
+
+/* Когда страница загружается, через 0.5s форма станет видимой */
+body.loaded .fade-in-form {
+    opacity: 1;
+    transform: translateY(0); /* Возвращаем форму в исходное положение */
 }

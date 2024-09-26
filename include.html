@@ -13,14 +13,14 @@
     <video autoPlay muted loop class="background-video">
         <source src='src/background.mp4' type="video/mp4" />
     </video>
-    <form>
+    <form class="fade-in-form">
         <i class="b1"></i>
         <i class="b2"></i>
         <i class="b3"></i>
 
         <div class="login">
 
-            <h1>LOGIN</h1>
+            <h1>Привет</h1>
             <input type="text" placeholder="Username" />
             <input type="text" placeholder="Password" />
             <button><a href="http://127.0.0.1:5500/main.html" class="link">Sign Up</a></button>
@@ -31,5 +31,11 @@
         </div>
     </form>
 </body>
+
+<script>
+    window.addEventListener('load', function () {
+        document.body.classList.add('loaded');
+    });
+</script>
 
 </html>
