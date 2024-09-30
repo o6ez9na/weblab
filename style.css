@@ -71,6 +71,15 @@ input::placeholder {
 .link{
     text-decoration: none;
     color: wheat;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 40px;
+    border:none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: .5s;
+    background: linear-gradient(45deg, purple, yellow);
+    text-align: center;
 
 }
 

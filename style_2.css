@@ -13,11 +13,45 @@ header {
     height: 98px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-img {
+.head input{
+    height: 30px;
+    margin-top: 3%;
+    width: 30%;
+    margin: 0;
+    border-radius: 20px;
+    padding-left: 20px;
+    border:none;
+}
+
+.head input:focus{
+    outline: none;
+}
+
+.head img {
+    position: absolute;
+    left:0;
     width: 200px;
     overflow: hidden;
+}
+
+.head button{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border:none;
+    margin: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.head button:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
 }
 
 body {
@@ -42,13 +76,51 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     text-align: center;
 }
 
+.product button{
+    margin: 5% auto 5%;
+    width: 120px;
+    height: 30px;
+    background-color: #005bff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s all;
+    color:aliceblue;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img{
+    width: 20px;
+    margin-right: 5px;
+}
+.product button:hover{
+    background-color: #15459c;
+}
+
 .product:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.product h3 {
+    margin: 16px 0 8px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.product p {
+    padding: 0 16px;
+    font-size: 1em;
+    color: #666;
 }
 
 .image {
@@ -63,17 +135,7 @@ body {
     object-fit: cover;
 }
 
-.product h3 {
-    margin: 16px 0 8px;
-    font-size: 1.5em;
-    color: #333;
-}
 
-.product p {
-    padding: 0 16px 16px;
-    font-size: 1em;
-    color: #666;
-}
 
 @media (max-width: 1200px) {
     .products {
