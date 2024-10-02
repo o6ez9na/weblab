@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -83,18 +81,8 @@ input::placeholder {
 
 }
 
-button {
-    width: 100%;
-    padding: 12px 20px;
-    border-radius: 40px;
-    border:none;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: .5s;
-    background: linear-gradient(45deg, purple, yellow);
-}
 
-button:hover {
+.link:hover {
     filter: drop-shadow(0 0 5px yellow)
 }
 
