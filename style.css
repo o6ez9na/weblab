@@ -22,7 +22,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #0d0000;
-
+    overflow: hidden;
 }
 
 form{
@@ -90,7 +90,6 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
 }
 
 p{
@@ -168,7 +167,6 @@ header {
     transform: translateY(-20px); /* Начальное смещение формы вверх */
     transition: opacity 1s ease, transform 1s ease; /* Плавный переход прозрачности и смещения */
     transition-delay: 0.2s; /* Задержка перед запуском анимации */
-
 }
 
 /* Когда страница загружается, через 0.5s форма станет видимой */
