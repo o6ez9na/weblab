@@ -1,0 +1,219 @@
+.header {
+  position: fixed; /* Используем fixed, чтобы хедер всегда был сверху */
+
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Чтобы хедер находился поверх других элементов */
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px; /* Добавлено для отступов с боков */
+}
+
+.button-on-header {
+  padding: 10px;
+  margin: 2px;
+
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+
+  cursor: pointer;
+  background-color: inherit;
+  transition: 0.3s ease-in-out;
+
+  color: white;
+  border-color: white;
+}
+
+.button-on-header:hover {
+  transform: scale(1.05);
+}
+
+.main-filters {
+  margin-top: 100px;
+  margin-right: 10px;
+  width: 200px;
+  height: 650px;
+  background-color: #007bff;
+}
+
+.header-input {
+  width: 400px;
+  margin-left: 80px;
+  padding: 3px;
+}
+
+.header-find-button {
+  padding: 3px;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.main-wrapper {
+  height: auto;
+  padding: 20px 10px 10px 10px;
+  background-color: gainsboro;
+  display: grid;
+  grid-template-columns: 210px auto;
+}
+
+.main-card-place {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 3440px) {
+  .main-card-place {
+    grid-template-columns: repeat(13, 1fr);
+  }
+}
+
+@media (max-width: 1920px) {
+  .main-card-place {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1600px) {
+  .main-card-place {
+    grid-template-columns: repeat(6, 228px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-card-place {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .main-card-place {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-card-place {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .main-card-place {
+    grid-template-columns: 1fr;
+  }
+}
+
+.background-image {
+  background: url("https://bogatyr.club/uploads/posts/2023-03/1677702103_bogatyr-club-p-dikii-zapad-pustinya-foni-krasivo-81.jpg")
+    no-repeat center center; /* Центрирование и отключение повторения */
+  background-size: cover; /* Растягивает изображение, сохраняя пропорции */
+  width: 100%;
+  height: 100vh; /* Высота на весь экран */
+  position: fixed; /* Фиксированное положение для фона */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.card-wrapper {
+  background: url("https://lative-oboi.ru/image/cache/catalog/image/catalog/loft/6355635.webp");
+  color: aliceblue;
+  padding: 15px;
+  border-radius: 15px;
+  transition: 0.3s all;
+}
+
+.card-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.card-content p {
+  margin: 0;
+}
+.card-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 15px;
+  background-color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.card-image:hover {
+  transform: scale(1.025);
+}
+
+.card-button {
+  padding: 7px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: snow;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.switchText {
+  margin-top: 10px;
+}
+
+.switchButton {
+  background: none;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header-logo {
+  width: 80px;
+  height: 80px;
+}
