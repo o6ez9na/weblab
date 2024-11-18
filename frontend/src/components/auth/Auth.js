@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login({ users }) {
   const [formData, setFormData] = useState({
@@ -8,7 +8,7 @@ export default function Login({ users }) {
   });
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -27,6 +27,7 @@ export default function Login({ users }) {
     if (user) {
       setMessage("Login successful!");
       setIsSuccess(true);
+      setTimeout(() => navigate("/"), 1000);
     } else {
       setMessage("User not found or incorrect password!");
     }

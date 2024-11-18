@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register({ onRegister }) {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ export default function Register({ onRegister }) {
   });
   const [message, setMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -29,6 +29,7 @@ export default function Register({ onRegister }) {
     if (isRegistered) {
       setMessage("Registration successful! You can now log in.");
       setIsSuccess(true);
+      setTimeout(() => navigate("/login"), 1000);
     } else {
       setMessage("User already exists!");
     }

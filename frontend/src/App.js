@@ -26,6 +26,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          <Route path="/" element={<MainPage />} />
           <Route
             path="/auth"
             element={<Login users={users} />} // Передаем пользователей
@@ -34,7 +35,6 @@ function App() {
             path="/register"
             element={<Register onRegister={handleRegister} />} // Передаем функцию регистрации
           />
-          <Route path="/main" element={<MainPage />} />
           <Route path="*" element={<Navigate to="/auth" />} />
         </Routes>
       </div>

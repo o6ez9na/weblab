@@ -61,13 +61,13 @@
   padding: 20px 10px 10px 10px;
   background-color: gainsboro;
   display: grid;
-  grid-template-columns: 210px auto;
+  /* grid-template-columns: repeat(10, 1fr); */
 }
 
 .main-card-place {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 10px;
 }
 
@@ -79,7 +79,7 @@
 
 @media (max-width: 1920px) {
   .main-card-place {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 
